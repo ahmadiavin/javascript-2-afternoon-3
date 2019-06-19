@@ -124,6 +124,10 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+function uniq (arr, cb){
+  let duplicate2 = arr.filter(function(cur, ind, arr){return arr.indexOf(cur) == ind});
+  cb(duplicate2)
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -141,7 +145,9 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
+function each(arr,cb) {
 
+}
 // Do not edit the code below.
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
