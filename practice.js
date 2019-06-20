@@ -145,9 +145,15 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
-function each(arr,cb) {
+function each (arr, cb){
+    for(var i = 0; i < arr.length; i++){
+      cb(arr[i], i)
+    }
+    arr.forEach((cur, i)=>cb(cur, i))
+  }
 
-}
+
+  
 // Do not edit the code below.
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
@@ -165,6 +171,16 @@ each(names, function(item, indice){
 
 // Code here
 
+//  I still have no clue on most of these problems,
+ // i found bits and pieces of answers online for the majority of the problems in this practice set. 
+// not sure if anyone sees this but putting it out there anyway. -ali
+function getUserById (arr, id, cb){
+  for(var i = 0; i < arr.length; i++){
+    if (id /*15a*/=== arr[i].id){
+      return cb(arr[i])
+    }
+  }
+}
 // Do not edit the code below.
 var users = [
   {
